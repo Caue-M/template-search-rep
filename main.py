@@ -1,5 +1,3 @@
-"""Script de demonstração — útil para depurar manualmente."""
-
 from puzzle.state import State
 from algorithms.bfs import BFS
 from algorithms.dfs import DFS
@@ -10,7 +8,7 @@ def print_result(name: str, result):
     print(f"\n{'='*40}")
     print(f"Algoritmo : {name}")
     if result.found:
-        print(f"Solução   : {' → '.join(result.actions)}")
+        print(f"Solução   : {' -> '.join(result.actions)}")
         print(f"Custo     : {result.path_cost}")
         print(f"Profund.  : {result.depth}")
     else:
@@ -21,7 +19,7 @@ def print_result(name: str, result):
 
 
 if __name__ == "__main__":
-    initial = State((2, 8, 3, 1, 6, 4, 7, 0, 5))   # ~20 movimentos até a solução
+    initial = State((1, 2, 3, 5, 0, 6, 4, 7, 8))
 
     print("Estado inicial:")
     print(initial)
